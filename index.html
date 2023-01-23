@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="./app.js"></script>
+</head>
+<body>
+    <script>
+        window.onload = getWeather()
+    </script>
+    <h1 id="city_name">City</h1>
+    <section>
+      <h2 id="current_temp" style="font-size: 3em; font-weight: bold;">Weather</h2>
+      <h3 id = "feels_like">Feels Like:</h3>
+      <h3 id="temp_high">High:</h3>
+      <h3 id="temp_low">Low:</h3>
+    </section>
+    <div>
+      <input id="zip-code" type="text" placeholder="Zip Code">
+      <button style="background-color: green;" onclick="getWeather()">Update</button>
+    </div>
+    <div id="error-message" style="display: none;"></div>
+<script scr="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
