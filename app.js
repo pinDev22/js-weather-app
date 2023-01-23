@@ -1,24 +1,14 @@
 api_key = 'be4b80f2eedf0f89529a4659730c4491'
 api_url = 'https://api.openweathermap.org/'
-let defaultZip = "60611";
 
 
 
 function getWeather() {
 
-
-    zip_code = ""
-   //error message shown if value doesn't exist
-   let errorMessage = document.getElementById("error-message");
+    zip_code = document.getElementById("zip-code").value;
+    errorMessage = document.getElementById("error-message");
     
-   if (zip_code === "") {
-     zip_code = defaultZip
-   } else {
-     zip_code = document.getElementById("zip-code").value;
-   }
-
-    
-        if(zip_code.length !== 5 && zip_code !== NULL) {
+        if(zip_code.length !== 5) {
           errorMessage.style.display = "block";
           errorMessage.innerHTML = "Invalid Zip Code";
           return;
